@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         "txt-dark": "#222542",
         "txt-light": "#686A7E",
+        "txt-light-gray": "#DCDDE1",
         "bg-dark": "#203B3C",
         "bg-light": "#EDF2EA",
         "bg-x-light": "#EDF2EA",

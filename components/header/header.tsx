@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import Image from "next/image";
 
-interface IHeader {
+interface HeaderProps {
   url: string;
   alt: string;
   logo: string;
   text: string;
 }
 
-const Header: FC<IHeader> = ({ logo, url, alt, text }) => {
+const Header: FC<HeaderProps> = ({ logo, url, alt, text }) => {
   return (
     <header className="block border-b">
       <a
