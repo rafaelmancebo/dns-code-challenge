@@ -7,7 +7,7 @@ const Content: FC = () => {
   useEffect(() => {
     const getData = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
     return () => clearTimeout(getData);
   });
   return (

@@ -15,6 +15,7 @@ module.exports = {
         "bg-dark": "#203B3C",
         "bg-light": "#EDF2EA",
         "bg-x-light": "#EDF2EA",
+        "bg-backdrop": "#0009",
       },
     },
   },

@@ -1,9 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import GoogleDomains from "../../images/google_domains.png";
 import Button from "../button";
 import DomainHost from "../domain-host";
-import SkeletonLoading from "../skeleton-loading";
+import ShareDialog from "../share-dialog";
 const LoadedContent: FC = () => {
+  const [showDialog, setShowDialog] = useState<boolean>(false);
   return (
     <>
       <DomainHost
@@ -12,11 +13,9 @@ const LoadedContent: FC = () => {
         host="Google Domains"
         url="https://domains.google/"
       />
-
       <h3 className="text-txt-light text-sm mt-6 mb-3">
         How do you want to update your DNS?
       </h3>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div>
           <Button
@@ -39,26 +38,25 @@ const LoadedContent: FC = () => {
         </div>
       </div>
       <hr className="my-6" />
-
       <div className="flex justify-between items-center mt-6 mb-3">
         <h3 className="text-txt-dark text-sm md:text-base  mr-3">
           Want to send these to a friend/colleague to do for you?
         </h3>
         <Button
-          action={() => {}}
+          action={() => {
+            console.log("click");
+            setShowDialog(true);
+          }}
           label="Share"
           arrow={true}
           size="sm"
           color="dark"
         />
       </div>
-
       <hr className="my-6" />
-
       <h3 className="text-txt-light text-sm mt-6 mb-3">
         Are you a PRO at DNS? Update these records:
       </h3>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div className="border bg-bg-light p-3 rounded-lg">
           <div className="grid grid-cols-2 gap-5 ">
@@ -117,6 +115,7 @@ const LoadedContent: FC = () => {
           </div>
         </div>
       </div>
+      <ShareDialog show={showDialog} close={() => setShowDialog(false)} />
     </>
   );
 };
