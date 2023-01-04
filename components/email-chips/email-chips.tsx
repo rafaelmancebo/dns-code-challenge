@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from "react";
 import Image from "next/image";
-import deleteButton from "../../images/delete.svg";
+import deleteButton from "@images/delete.svg";
 interface EmailChipsProps {
   getEmails: (emails: string[]) => void;
 }

@@ -1,13 +1,13 @@
 import React, { FC, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
-import closeButton from "../../images/close.svg";
-import Button from "../button";
-import EmailChips from "../email-chips";
+import closeButton from "@images/close.svg";
+import Button from "@components/button";
+import EmailChips from "@components/email-chips";
 import Link from "next/link";
-import fb from "../../images/fb.svg";
-import tw from "../../images/tw.svg";
-import git from "../../images/git.svg";
+import fb from "@images/fb.svg";
+import tw from "@images/tw.svg";
+import git from "@images/git.svg";
 
 interface ShareDialogProps {
   show: boolean;
@@ -59,7 +59,7 @@ const ShareDialog: FC<ShareDialogProps> = ({ show, close }) => {
             <div className="text-center mt-4">
               <Button
                 action={() => {
-                  console.log(emailList);
+                  alert(JSON.stringify(emailList, null, 2));
                 }}
                 label="Send Invited"
                 arrow={false}

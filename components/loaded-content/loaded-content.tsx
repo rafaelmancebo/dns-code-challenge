@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
-import GoogleDomains from "../../images/google_domains.png";
-import Button from "../button";
-import DomainHost from "../domain-host";
-import ShareDialog from "../share-dialog";
+import GoogleDomains from "@images/google_domains.png";
+import Button from "@components/button";
+import DomainHost from "@components/domain-host";
+import ShareDialog from "@components/share-dialog";
 const LoadedContent: FC = () => {
   const [showDialog, setShowDialog] = useState<boolean>(false);
   return (
@@ -23,15 +23,15 @@ const LoadedContent: FC = () => {
             label="Update for me"
             arrow={true}
             size="lg"
-            description=" You just need to log in, we will update your DNS automatically"
+            description="You just need to log in, we will update your DNS automatically"
           />
         </div>
         <div>
           <Button
-            label="Update for me"
+            label="Add DNS Manually"
             arrow={true}
             size="lg"
-            description=" You just need to log in, we will update your DNS automatically"
+            description="Follow our tutorial to update your DNS manually"
             color="light"
             action={() => {}}
           />
@@ -44,7 +44,6 @@ const LoadedContent: FC = () => {
         </h3>
         <Button
           action={() => {
-            console.log("click");
             setShowDialog(true);
           }}
           label="Share"

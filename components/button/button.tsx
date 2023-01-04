@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import dark_arrow_right from "../../images/dark_arrow_right.svg";
-import white_arrow_right from "../../images/white_arrow_right.svg";
+import dark_arrow_right from "@images/dark_arrow_right.svg";
+import white_arrow_right from "@images/white_arrow_right.svg";
 
 interface ButtonProps {
   label: string;

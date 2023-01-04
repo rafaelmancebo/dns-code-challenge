@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
 
-import LoadedContent from "../loaded-content";
-import SkeletonLoading from "../skeleton-loading";
+import LoadedContent from "@components/loaded-content";
+import SkeletonLoading from "@components/skeleton-loading";
 const Content: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {

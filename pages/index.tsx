@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import Content from "../components/content";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import logo from "../images/trady_logo.svg";
+import Content from "@components/content";
+import Footer from "@components/footer";
+import Header from "@components/header";
+import logo from "@images/trady_logo.svg";
 export default function Home() {
   return (
     <>
