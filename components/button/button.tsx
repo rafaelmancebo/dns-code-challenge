@@ -37,7 +37,7 @@ const Button: FC<ButtonProps> = ({
             e.preventDefault();
             action();
           }}
-          className={`block relative ${currectBgColor} rounded-lg p-4 ${currentPaddingRight} hover:opacity-70`}>
+          className={`block relative min-h-[92px] ${currectBgColor} rounded-lg p-4 ${currentPaddingRight} hover:opacity-70`}>
           <span className="block text-base font-semibold mb-1">{label}</span>
           <span className={`block text-xs  ${currectTxtColor}`}>
             {description}
