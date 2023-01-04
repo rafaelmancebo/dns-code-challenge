@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import Image from "next/image";
 import deleteButton from "../../images/delete.svg";
 interface EmailChipsProps {
@@ -10,6 +10,10 @@ const EmailChips: FC<EmailChipsProps> = ({ getEmails }) => {
   const [items, setItems] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    getEmails(items);
+  }, [getEmails, items]);
+
   const handleKeyDown = (evt: React.KeyboardEvent<HTMLInputElement>) => {
     if (["Enter", "Tab", ","].includes(evt.key)) {
       evt.preventDefault();
@@ -19,7 +23,6 @@ const EmailChips: FC<EmailChipsProps> = ({ getEmails }) => {
       if (valueTemp && isValid(value)) {
         setItems([...items, value]);
         setValue("");
-        getEmails(items);
       }
     }
   };
@@ -31,7 +34,6 @@ const EmailChips: FC<EmailChipsProps> = ({ getEmails }) => {
 
   const handleDelete = (item: string) => {
     setItems(items.filter((i) => i !== item));
-    getEmails(items);
   };
 
   const handlePaste = (evt: React.ClipboardEvent<HTMLInputElement>) => {
@@ -45,7 +47,6 @@ const EmailChips: FC<EmailChipsProps> = ({ getEmails }) => {
       const allEmails = [...items, ...toBeAdded];
 
       setItems([...items, ...allEmails]);
-      getEmails(items);
     }
   };
 

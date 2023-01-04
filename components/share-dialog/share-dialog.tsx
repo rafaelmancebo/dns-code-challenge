@@ -19,7 +19,6 @@ const ShareDialog: FC<ShareDialogProps> = ({ show, close }) => {
     "trady.dev/dns/aweasdkrh2903jas..."
   );
   const [emailList, setEmailList] = useState<string[]>([]);
-  console.log(emailList);
 
   return (
     <Dialog className="relative z-100" open={show} onClose={() => close()}>
